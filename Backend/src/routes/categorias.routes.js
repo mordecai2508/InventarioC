@@ -8,6 +8,8 @@ const router = Router();
 router.get("/", categoriaController.getCategorias);
 router.post("/", categoriaController.postCategorias);
 
+//ruta que recibe un parametro
+router.get("/:id", categoriaController.getCategory);
 
 // hacer disponible al router en toda la app
 export default router;
