@@ -49,9 +49,28 @@ const deleteCategory = async (req,res)=>{
     }
 }
 
+
+//Metodo para actualizar una categoria
+
+const updateCategory = async (req, res) =>{
+    try {
+        const {id} = req.params
+        const {CategoriaNombre, Descripcion, Imagen} = req.body;
+        const category = {CategoriaNombre, Descripcion, Imagen}
+        const connection = await getConenection();
+        const result = await connection.query("UPDATE categorias SET ? WHERE CategoriaID = ?", [category,id])
+        res.json(result)
+    } catch (error) {
+        console.error("Error 500");
+        
+    }
+}
+
+
 export const methodHTTP = {
     getCategorias,
     postCategorias,
     getCategory,
-    deleteCategory
+    deleteCategory,
+    updateCategory
 }

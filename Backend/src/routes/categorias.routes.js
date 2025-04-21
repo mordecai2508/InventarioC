@@ -14,5 +14,9 @@ router.get("/:id", categoriaController.getCategory);
 //Elimina una categoria por un ID
 router.delete("/:id", categoriaController.deleteCategory);
 
+
+//Actualizar, recibe el cuerpo y el id
+router.put("/:id", categoriaController.updateCategory);
+
 // hacer disponible al router en toda la app
 export default router;
