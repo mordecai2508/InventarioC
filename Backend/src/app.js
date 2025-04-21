@@ -12,6 +12,10 @@ const app = express();
 
 /* configurar un puerto*/
 app.set("port",5000)
+
+//Middleware
+app.use(express.json());
+
 app.use(cors())
 // routes 
 app.use("/api/categorias",categoriaRoutes);

@@ -5,7 +5,9 @@ const router = Router();
 
 
 //configuración del  Metodo get
-router.get("/", categoriaController.getCategorias)
+router.get("/", categoriaController.getCategorias);
+router.post("/", categoriaController.postCategorias);
+
 
 // hacer disponible al router en toda la app
 export default router;
