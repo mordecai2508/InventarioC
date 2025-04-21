@@ -11,5 +11,8 @@ router.post("/", categoriaController.postCategorias);
 //ruta que recibe un parametro
 router.get("/:id", categoriaController.getCategory);
 
+//Elimina una categoria por un ID
+router.delete("/:id", categoriaController.deleteCategory);
+
 // hacer disponible al router en toda la app
 export default router;
