@@ -10,7 +10,6 @@ const getCategorias = async (req,res)=>{
 }
 
 
-
 const postCategorias = async (req, res) =>{
     try {
         const {CategoriaNombre, Descripcion, Imagen} = req.body;
