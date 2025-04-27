@@ -1,4 +1,5 @@
 import getConenection from "../db/database.js"
+
 const getCategorias = async (req,res)=>{
     try {
         const connection = await getConenection();

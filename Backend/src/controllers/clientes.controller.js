@@ -1,6 +1,6 @@
 import getConnection from "../db/database.js";
 
-const postCliente = async (req, res) => {
+export const postCliente = async (req, res) => {
   try {
     const {
       ClienteID,
@@ -31,6 +31,7 @@ const postCliente = async (req, res) => {
   }
 };
 
-export default {
+// Si deseas mantener el objeto methodHTTP, puedes incluirlo también
+export const methodHTTP = {
   postCliente,
 };

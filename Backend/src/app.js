@@ -31,6 +31,10 @@ app.use("/api/empleados", empleadoRoutes);
 //crear el endpoint para subir los clientes
 app.use("/api/clientes", clienteRoutes);
 
+import productoRoutes from "./routes/productos.routes.js";
+
+app.use("/api/productos", productoRoutes);
+
 // se hace disponible a mi server app para toda aplicacion 
 export default app;
 

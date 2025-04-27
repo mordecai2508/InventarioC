@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { registrarCliente } from "../controllers/clientes.controller.js";
+import { methodHTTP as cientesController } from "../controllers/clientes.controller.js";
 
 const router = Router();
 
 // Endpoint para registrar un cliente
-router.post("/", registrarCliente);
+router.post("/", cientesController.postCliente);
 
 export default router;
